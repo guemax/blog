@@ -17,6 +17,8 @@ bitte per E-Mail: [info@guemax.de](mailto:info@guemax.de)."""
 homeCollectionTitle = 'Blog'
 homeCollection = 'blog'
 
+paginationSize = 100
+
 [markup]
 [markup.highlight]
 style = 'algol'
