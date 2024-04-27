@@ -4,6 +4,7 @@ date: 2024-04-26T15:45:30+02:00
 toc: true
 readtime: 6
 autonumber: true
+math: true
 draft: true
 ---
 
@@ -46,17 +47,16 @@ them.  Luckily, the calculation can be performed using basic algebra!
 
 Recall that a complex number $a = x + yi$ consists of both a real part
 $x$ and an imaginary part $y$, which can be used to represent the
-complex number as a point in the complex plane, as shown in figure 1
-down below[^fig1].  It is worth noting that this is a two-dimensional
-coordinate system, which is (of course) supported by Metapost.
+complex number as a point in the complex plane, as shown in figure 1.
+It is worth noting that this is a two-dimensional coordinate system,
+which is (of course) supported by Metapost.
 
-![The complex number 1+0.75i in the complex
-plane.](/img/complex-number-in-the-complex-plane.png)
-
-[^fig1]: The complex number $c = 1 + 0.75i$ in the complex plane. $Re$
-    is the real axis, $Im$ the imaginary axis. The equation notated
-    diagonally uses Pythagoras' theorem for calculating the distance
-    between point $c$ and the origin of the coordinate system.
+![**Figure 1**: The complex number $c = 1 + 0.75i$ in the complex
+    plane. $Re$ is the real axis, $Im$ the imaginary axis. The
+    equation notated diagonally uses Pythagoras' theorem for
+    calculating the distance between point $c$ and the origin of the
+    coordinate system.](/img/complex-number-in-the-complex-plane.png
+    "Figure 1.")
 
 We also need to be able to add and square complex numbers.  By looking
 at the real and imaginary part of a complex number separately, we can
@@ -78,8 +78,8 @@ huge to be handled by Metapost.
 
 At this point the Mandelbrot set was easy to recognize, but rather
 dull: each pixel belonging to the set was colored black, the rest was
-white.  To uncover more detail of the Mandelbrot set—especially in the
-aura—we can use the escape time algorithm.  The color of a pixel
+white.  To uncover more detail of the Mandelbrot set&nbsp;--- especially in the
+aura&nbsp;--- we can use the escape time algorithm.  The color of a pixel
 depends on the number of iterations $n$ completed before the norm of
 the position vector $\vec{z}$ exceeds the radius of 2.  In Voß’
 implementation, this results in a value between 0 and 255; however,
@@ -110,28 +110,25 @@ tinkering I finally achieved convincing results.  I enjoyed the
 process and now feel more confident about working with Metapost in the
 future.
 
-Figure 2 down below[^fig2] shows the final image of the
-"Apfelmännchen", as this detail of the Mandelbrot set is called in
-Germany, because it is reminiscent of a man rotated by 90 degrees.
-The source code is displayed in the next section.  Feel free to try it
-out by yourself and play around with the values to explore different
-parts of the Mandelbrot set.
+Figure 2 shows the final image of the "Apfelmännchen", as this detail
+of the Mandelbrot set is called in Germany, because it is reminiscent
+of a man rotated by 90 degrees.  The source code is displayed in the
+next section.  Feel free to try it out by yourself and play around
+with the values to explore different parts of the Mandelbrot set.
 
-![The complex number 1+0.75i in the complex
-plane.](/img/apfelmaennchen.png)
-
-[^fig2]: The output of the Metapost program. The generation of this
-    image with a resolution of 1000 by 1000 pixels took about three
-    minutes on an 11th Gen Intel i7. The following values were used:
-    $x_{\min} = −2$, $x_{\max} = 0.5$, $y_{\min} = −1.25$, $x_{\max} =
-    1.25$, $n_{\max} = 200$ and $res = 1000$.
+![**Figure 2:** The output of the Metapost program. The generation of
+    this image with a resolution of 1000 by 1000 pixels took about
+    three minutes on an 11th Gen Intel i7. The following values were
+    used: $x_{\min} = −2$, $x_{\max} = 0.5$, $y_{\min} = −1.25$,
+    $x_{\max} = 1.25$, $n_{\max} = 200$ and $res =
+    1000$.](/img/apfelmaennchen.png "Figure 2.")
 
 ## Final code
 
 Save the following code as `mandelbrot.mp` and run it using `mpost
 mandelbrot.mp`. The resulting image is called `mandelbrot.png`.
 
-```<
+```
 outputtemplate := "%j.png";
 outputformat := "png";
 
