@@ -1,0 +1,21 @@
+baseURL = 'https://guemax.de/'
+languageCode = 'de-de'
+title = 'Max Günther'
+theme = 'zapf'
+
+[params]
+homeIntro = true
+homeIntroContent = """Herzlich willkommen!  Mein Name ist Max und ich
+interessiere mich für Computer, Programmieren und professionellen
+Schriftsatz mit LaTeX und ConTeXt.  Bei Fragen, Anregungen und Kritik
+zu diesem Blog kontaktieren Sie mich bitte per E-Mail:
+[info@guemax.de](mailto:info@guemax.de)."""
+
+homeCollectionTitle = 'Blog'
+homeCollection = 'blog'
+
+math=true
+
+[markup]
+[markup.highlight]
+style = 'algol'
